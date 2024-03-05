@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class Deneme2Config(AppConfig):
+class HomeConfig(AppConfig):
     default_auto_field = "django.db.models.BigAutoField"
-    name = "deneme2"
+    name = "Home"
