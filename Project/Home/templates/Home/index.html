@@ -1,24 +1,70 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <link rel="stylesheet" href={% static 'css/bootstrap.min.css' %}>
 <title>Page Title</title>
 </head>
-<body>
-<nav>
-    <div>Home</div>
-    <div>About</div>
-    <div>Products</div>
-</nav>
-
-<h1 >This is a Heading</h1>
-<p>This is a paragraph.</p>
-Murat was Here !!!!
+<body class="vh-100" >
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Products</a>
+            </li>
+            {% comment %} <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li> {% endcomment %}
+          </ul>
+        </div>
+      </div>
+  </nav>
+  <div class="container-fluid bg-info-subtle h-100">
+    <div class="row h-100">
+      <div class="col-3 text-center bg-danger h-100">
+        <div>
+          Col 1
+        </div>
+        <ul class="list-group mt-2 ">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+          <li class="list-group-item">A fourth item</li>
+          <li class="list-group-item">And a fifth one</li>
+        </ul>
+      </div>
+      <div class="col-6 text-center h-100">Col2 
+        Content
+      </div>
+      <div class="col-3 text-center bg-danger  ">
+        <div class="container-fluid  align-items-center d-flex flex-column  ">
+          <div>Col 3</div>
+          <div class="card" style="">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
 
 </body>
-<script src= {% static 'js/bootstrap.min.js' %}>
-    
-</script>
+<script src= {% static 'js/bootstrap.min.js' %}></script>
 </html>
