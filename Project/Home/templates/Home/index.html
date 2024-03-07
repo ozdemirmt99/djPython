@@ -1,17 +1,26 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
     <link rel="stylesheet" href={% static 'css/bootstrap.min.css' %}>
-<title>Page Title</title>
-</head>
-<body class="vh-100" >
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <title>Page Title</title>
+  </head>
+  <body class="vh-100">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -31,40 +40,42 @@
           </ul>
         </div>
       </div>
-  </nav>
-  <div class="container-fluid bg-info-subtle h-100">
-    <div class="row h-100">
-      <div class="col-3 text-center bg-danger h-100">
-        <div>
-          Col 1
+    </nav>
+    <div class="container-fluid bg-info-subtle h-100">
+      <div class="row h-100">
+        <div class="col-3 text-center bg-danger h-100">
+          <div>Col 1</div>
+          <ul class="list-group mt-2 ">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+            <li class="list-group-item">A fourth item</li>
+            <li class="list-group-item">And a fifth one</li>
+          </ul>
         </div>
-        <ul class="list-group mt-2 ">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-          <li class="list-group-item">A fourth item</li>
-          <li class="list-group-item">And a fifth one</li>
-        </ul>
-      </div>
-      <div class="col-6 text-center h-100">Col2 
-        Content
-      </div>
-      <div class="col-3 text-center bg-danger  ">
-        <div class="container-fluid  align-items-center d-flex flex-column  ">
-          <div>Col 3</div>
-          <div class="card" style="">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+        <div class="col-6 text-center h-100">
+          Col2
+          Content
+          {% comment %} {% include content %} {% endcomment %}
+          {% if content %}
+            {% include content %}
+          {% endif %}
+        </div>
+        <div class="col-3 text-center bg-danger  ">
+          <div class="container-fluid  align-items-center d-flex flex-column  ">
+            <div>Col 3</div>
+            <div class="card">
+              <img src="..." class="card-img-top" alt="..." width="auto" height="auto">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
             </div>
           </div>
-      </div>
+        </div>
       </div>
     </div>
-  </div>
-
-</body>
-<script src= {% static 'js/bootstrap.min.js' %}></script>
+  </body>
+  <script src= {% static 'js/bootstrap.min.js' %}></script>
 </html>
