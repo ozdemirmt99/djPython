@@ -1,3 +1,16 @@
 <div>
-    Products partial 
+    Products partial
+    <div>
+        <ul class="list-group">
+            {% if items %}
+                {% for item in items %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        
+                        {{ item }} . Satırdaki veriyi görüyorsunuz...
+                        <span class="badge text-bg-primary rounded-pill"> 5 </span>
+                    </li>
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
 </div>
