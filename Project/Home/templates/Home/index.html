@@ -1,4 +1,5 @@
 {% load static %}
+{# djlint:off H021 #}
 <!DOCTYPE html>
 <html lang="en">
   <meta charset="UTF-8">
@@ -12,9 +13,9 @@
     <title>Kayısı Diyarı</title>
   </head>
   <body class="vh-100">
-    <nav class="navbar navbar-expand-lg bg-light-subtle   ">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark   ">
       <div class="container-fluid">
-        <a class="navbar-brand" href={% url "index" %}> <i class="bi bi-alarm-fill" style="font-size=25px;" ></i> Kayısı</a>
+        <a class="navbar-brand" href={% url "index" %}><i class="bi bi-alarm-fill" style="font-size=25px;" ></i> Kayısı</a>
         <button class="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
@@ -36,6 +37,7 @@
               <a class="nav-link"  href={% url "products" %}>Products</a>
             </li>
           </ul>
+          <div class="fantastic text-white d-flex justify-content-end w-100  ">Go away</div>
         </div>
       </div>
     </nav>
