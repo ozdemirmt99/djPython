@@ -1,1 +1,3 @@
 # djPython
+
+Fundamentals of Django. 
